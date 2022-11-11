@@ -9,19 +9,19 @@ const NavBar = () => {
                 <a href="index.html">
                     <img className='steve' src={pizza} alt="pizza"></img>
                 </a>
-                <p className="pizzarrap">PIZZARRAP</p>
+                <p className="pizzarrap">CLOUDSPORT JUJUY</p>
             </div>
 
             <div >
                 <ul className="nav-item">
                     <li className="item" >
-                        <a href="index.html">HOME</a>
+                        <a href="index.html">DEPORTIVO</a>
                     </li>
                     <li className="item">
-                        <a href="index.html">MENU</a>
+                        <a href="index.html">LO NUEVO-2022</a>
                     </li>
                     <li className="item">
-                        <a href="index.html">CONTACTO</a>
+                        <a href="index.html">URBANO</a>
                     </li>
                 </ul>
             </div>

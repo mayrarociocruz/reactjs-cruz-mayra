@@ -1,36 +1,31 @@
-import CartWidget from "./CartWidget";
-import pizza from '../assets/pizza.png';
+import { Link } from "react-router-dom";
+import CartWidget from "./CartWidget.js";
+import Container from "react-bootstrap/Container";
+import Nav from "react-bootstrap/Nav";
+import NavbarBootstrap from "react-bootstrap/Navbar";
 
-const NavBar = () => {
-    return (
-        <nav className="header">
-
-            <div className="brand">
-                <a href="index.html">
-                    <img className='steve' src={pizza} alt="pizza"></img>
-                </a>
-                <p className="pizzarrap">CLOUDSPORT JUJUY</p>
-            </div>
-
-            <div >
-                <ul className="nav-item">
-                    <li className="item" >
-                        <a href="index.html">DEPORTIVO</a>
-                    </li>
-                    <li className="item">
-                        <a href="index.html">LO NUEVO-2022</a>
-                    </li>
-                    <li className="item">
-                        <a href="index.html">URBANO</a>
-                    </li>
-                </ul>
-            </div>
-
-            <div className="carrito">
-                <CartWidget/>
-            </div>
-        </nav>
-    )
+const NavBar = () =>  {
+  return (
+    <NavbarBootstrap bg="light" expand="lg" sticky="top">
+      <Container>
+        <NavbarBootstrap.Toggle aria-controls="basic-Navbar-nav" className="order-lg-1"/>
+          <NavbarBootstrap.Brand className="order-lg-0">
+            <Link to={`/`}>CLOUDSPORT-JUJUY</Link>
+          </NavbarBootstrap.Brand>
+          
+          <NavbarBootstrap.Collapse id="basic-Navbar-nav nabvarMenu" >
+            <Nav className="me-auto text-center">
+              <Link to={`/categoryId/nuevo`} className="linksNavbar">  LO NUEVO-2022  </Link>
+              <Link to={`/category/urbanas`} className="linksNavbar">  MODA URBANA  </Link>
+              <Link to={`/category/zapatillas`} className="linksNavbar">  SECCION DEPORTIVA  </Link>
+            </Nav>
+            
+        </NavbarBootstrap.Collapse>
+        
+      </Container>
+      <CartWidget/>
+    </NavbarBootstrap>
+  );
 }
 
 export default NavBar;

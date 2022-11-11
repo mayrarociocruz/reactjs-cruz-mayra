@@ -1,4 +1,3 @@
-
 let is_ok = true
 
 export const customFetch = (time, task) => {
@@ -12,3 +11,4 @@ export const customFetch = (time, task) => {
         }, time)
     })
 }
+export default customFetch;

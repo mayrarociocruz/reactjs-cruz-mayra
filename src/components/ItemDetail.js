@@ -7,20 +7,21 @@ import Row from "react-bootstrap/Row";
 import Button from 'react-bootstrap/Button';
 import { Link } from "react-router-dom";
 
-export const ItemDetail = ({ items }) => {
+export const ItemDetail = ({ item }) => {
     return (
+        <>
     <Card>
         <Container>
         <Row>
             <Col xs={12} md={6} sm={6} lg={6}>
-            <Card.Img variant="top" className="imagenProduct" src={items.imagen} />
+            <Card.Img variant="top" className="imagenProduct" src={item.imagen} />
             </Col>
             <Col xs={12} md={6} sm={6} lg={6}>
             <Card.Body>
-                <Card.Title className="tituloProductoDetalle">{items.articulo}</Card.Title>
-                <Card.Text> {items.categoryId}</Card.Text>
-                <Card.Text className="stockProducto"> Stock: {items.stock} u.</Card.Text>
-                <Card.Text className="precioProducto"> Precio: {items.precio}</Card.Text>
+                <Card.Title className="tituloProductoDetalle">{item.articulo}</Card.Title>
+                <Card.Text> {item.categoryId}</Card.Text>
+                <Card.Text className="stockProducto"> Stock: {item.stock} u.</Card.Text>
+                <Card.Text className="precioProducto"> Precio: {item.precio}</Card.Text>
                 <ItemCount/>
                 <Link to={'/cart'}><Button variant="outline-primary">Agregar al carrito</Button></Link>
             </Card.Body>
@@ -28,6 +29,7 @@ export const ItemDetail = ({ items }) => {
         </Row>
         </Container>
     </Card>
+    </>
     );
 };
 export default ItemDetail;

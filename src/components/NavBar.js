@@ -15,7 +15,7 @@ const NavBar = () =>  {
           
           <NavbarBootstrap.Collapse id="basic-Navbar-nav nabvarMenu" >
             <Nav className="me-auto text-center">
-              <Link to={`/categoryId/nuevo`} className="linksNavbar">  LO NUEVO-2022  </Link>
+              <Link to={`/category/nuevo`} className="linksNavbar">  LO NUEVO-2022  </Link>
               <Link to={`/category/urbanas`} className="linksNavbar">  MODA URBANA  </Link>
               <Link to={`/category/zapatillas`} className="linksNavbar">  SECCION DEPORTIVA  </Link>
             </Nav>

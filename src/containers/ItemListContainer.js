@@ -29,7 +29,7 @@ const ItemListContainer = () => {
         
         <Container>
             <Row>
-                <ItemList items={datos} />
+                <Col><ItemList items={datos} /></Col>
             </Row>
         </Container>
         

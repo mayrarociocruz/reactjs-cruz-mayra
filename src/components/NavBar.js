@@ -6,24 +6,25 @@ import NavbarBootstrap from "react-bootstrap/Navbar";
 
 const NavBar = () =>  {
   return (
-    <NavbarBootstrap bg="light" expand="lg" sticky="top">
+    <NavbarBootstrap bg="dark" expand="lg" sticky="top">
       <Container>
         <NavbarBootstrap.Toggle aria-controls="basic-Navbar-nav" className="order-lg-1"/>
-          <NavbarBootstrap.Brand className="order-lg-0">
-            <Link to={`/`}>CLOUDSPORT-JUJUY</Link>
+          <NavbarBootstrap.Brand className="brand">
+            <Link to={`/`} className="brand">CLOUDSPORT-JUJUY</Link>
           </NavbarBootstrap.Brand>
           
           <NavbarBootstrap.Collapse id="basic-Navbar-nav nabvarMenu" >
             <Nav className="me-auto text-center">
-              <Link to={`/category/nuevo`} className="linksNavbar">  LO NUEVO-2022  </Link>
-              <Link to={`/category/urbanas`} className="linksNavbar">  MODA URBANA  </Link>
-              <Link to={`/category/zapatillas`} className="linksNavbar">  SECCION DEPORTIVA  </Link>
+              <Link to={`/category/nuevo`} className="linkNavbar">  LO NUEVO-2022  </Link>
+              <Link to={`/category/urbanas`} className="linkNavbar">  MODA URBANA  </Link>
+              <Link to={`/category/zapatillas`} className="linkNavbar">  SECCION DEPORTIVA  </Link>
             </Nav>
             
         </NavbarBootstrap.Collapse>
         
+        <CartWidget/>
       </Container>
-      <CartWidget/>
+      
     </NavbarBootstrap>
   );
 }

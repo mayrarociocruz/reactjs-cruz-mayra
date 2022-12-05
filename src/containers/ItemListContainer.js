@@ -1,38 +1,35 @@
 import React from 'react';
-import {customFetch} from "../utils/customFetch";
 import { useParams } from "react-router-dom";
 import ItemList from "../components/ItemList"
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
-import { useEffect,useState } from "react";
-const { products } = require( "../utils/productos");
-
+import { useEffect, useState } from "react";
+import { firestoreFetch } from "../utils/firestoreFetch"
 
 
 const ItemListContainer = () => {
     const [datos, setDatos] = useState([]);
-    const { idCategory } = useParams();
+    let { idCategory } = useParams();
 
-    console.log(idCategory);
+ //component didMount llamamos a la promesa- didupdate
 
-    useEffect(() => {
-        customFetch(2000, products.filter(item => {
-            if (idCategory === undefined) return item;
-            return item.categoryId === parseInt(idCategory)
-        }))
-        .then(result => setDatos(result))
-        .catch(err => console.log(err))
-    }, [idCategory]);
+    useEffect(()=>{
+        firestoreFetch (idCategory)
+            .then (result => setDatos(result))
+            .catch(err => console.log(err))
+    },[idCategory]);
 
+//cuando le agregamos dependencias se comporta como un component didUpDate
     return (
         
         <Container>
             <Row>
-                <Col><ItemList items={datos} /></Col>
+                <Col><ItemList items={datos}/></Col>
             </Row>
         </Container>
         
     );
 }
 export default ItemListContainer;
+//el estado lepasamos por props a otro comnponente

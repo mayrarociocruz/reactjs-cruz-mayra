@@ -1,24 +1,35 @@
+import React from "react";
 import { useEffect, useState } from "react";
-import customFetch from "../utils/customFetch";
 import ItemDetail from "../components/ItemDetail";
 import { useParams } from "react-router-dom";
-import { products } from '../utils/productos';
+import { firestoreFetchOne } from "../utils/firestoreFetch";
+import Container from 'react-bootstrap/Container';
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
+
 
 
 const ItemDetailContainer = () => {
     const [dato, setDato] = useState({});
     const { idItem } = useParams();
 
-    //component didMount que devuelve un solo producto
+    console.log(idItem);
+    //component didMount uso la misma promesa pero devuelve un solo producto
     useEffect(() => {
-        customFetch(2000, products.find(item => item.id === idItem))
+        firestoreFetchOne(idItem)
         .then(result => setDato(result))
         .catch(err => console.log(err))
     }, [idItem]);
 
-    return (
-        <ItemDetail item={dato} />
+    return ( 
+        <>
+        <Container className="container-i">
+            <Row>
+                <Col><ItemDetail item={dato} /></Col>
+            </Row>
+        </Container>
+        </>
     );
 }
-
+//se setea la estado y se envia por props a otro componentellamado item detail
 export default ItemDetailContainer;

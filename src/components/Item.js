@@ -5,19 +5,22 @@ import  { Link } from 'react-router-dom';
 
 const Item = ({ id, articulo, precio, imagen, categoryId }) =>{
   return (
-    <Link to ={`/item/${id}`}>
-    <Card style={{ width: '18rem' }}>
+    
+    <Card className="card">
       
-      <Card.Img variant="top" src= {imagen} />
+      <Card.Img variant="top" src= {imagen} className="imagen-card" />
       <Card.Body>
-        <Card.Title>{articulo}</Card.Title>
-        <Card.Text> Precio: $ {precio}</Card.Text>
-        <Card.Footer>{categoryId}</Card.Footer>
-        <Button variant="secondary"><Link to={`/item/${id}`}>COMPRAR</Link></Button>
+        <Card.Title className='title-card'>{articulo}</Card.Title>
+        <Card.Text className='title-card'> Precio: $ {precio}</Card.Text>
+        <Card.Footer className='title-card'>Categoria: {categoryId}</Card.Footer>
+        <Link to={`/item/${id}`}><Button variant="secondary" className='boton-comprar'>COMPRAR</Button></Link>
       </Card.Body>
     </Card>
-    </Link>
+  
+  
   );
+  
 }
-
+console.log(Item)
 export default Item;
+//el item dibuja la card

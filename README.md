@@ -34,9 +34,9 @@ https://github.com/mayrarociocruz
 
 
 
-## Support
+## Support 🌱
 
-Toda muestra de agradecimiento es bienvenida y contribuye al crecimiento de su servidora 🌱
+*Toda muestra de agradecimiento es bienvenida y contribuye al crecimiento de su servidora 🌱 *
 
 
 

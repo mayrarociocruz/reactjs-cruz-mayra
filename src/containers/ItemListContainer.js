@@ -3,7 +3,7 @@ import { useParams } from "react-router-dom";
 import ItemList from "../components/ItemList"
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
-import Col from 'react-bootstrap/Col';
+//import Col from 'react-bootstrap/Col';
 import { useEffect, useState } from "react";
 import { firestoreFetch } from "../utils/firestoreFetch"
 
@@ -23,9 +23,9 @@ const ItemListContainer = () => {
 //cuando le agregamos dependencias se comporta como un component didUpDate
     return (
         
-        <Container>
-            <Row>
-                <Col><ItemList items={datos}/></Col>
+        <Container className='container-i'>
+            <Row className='container-item'>
+                <ItemList items={datos}/>
             </Row>
         </Container>
         

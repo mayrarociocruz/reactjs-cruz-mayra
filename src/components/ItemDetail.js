@@ -9,6 +9,7 @@ import { Link } from "react-router-dom";
 import { useState } from "react";
 import { CartContext } from "./CartContext";
 
+
 const ItemDetail = ({ item }) => {
     const [itemCount, setItemCount] = useState(0);
     const { addToCart } = useContext(CartContext);
@@ -23,7 +24,7 @@ const ItemDetail = ({ item }) => {
         {
             item && item.imagen
             ?
-        <Card>
+        <Card className="tarjeta">
         <Container>
         <Row>
             

@@ -13,7 +13,6 @@ const ItemDetailContainer = () => {
     const [dato, setDato] = useState({});
     const { idItem } = useParams();
 
-    console.log(idItem);
     //component didMount uso la misma promesa pero devuelve un solo producto
     useEffect(() => {
         firestoreFetchOne(idItem)
@@ -23,7 +22,7 @@ const ItemDetailContainer = () => {
 
     return ( 
         <>
-        <Container className="container-i">
+        <Container>
             <Row>
                 <Col><ItemDetail item={dato} /></Col>
             </Row>

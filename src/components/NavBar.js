@@ -8,7 +8,7 @@ const NavBar = () =>  {
   return (
     <NavbarBootstrap bg="dark" expand="lg" sticky="top">
       <Container>
-        <NavbarBootstrap.Toggle aria-controls="basic-Navbar-nav" className="order-lg-1"/>
+        <NavbarBootstrap.Toggle aria-controls="basic-Navbar-nav white" className="order-lg-1"/>
           <NavbarBootstrap.Brand className="brand">
             <Link to={`/`} className="brand">CLOUDSPORT-JUJUY</Link>
           </NavbarBootstrap.Brand>

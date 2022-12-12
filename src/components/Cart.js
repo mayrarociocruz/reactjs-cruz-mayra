@@ -6,6 +6,7 @@ import { Link } from "react-router-dom";
 import { collection, serverTimestamp, doc, setDoc, updateDoc, increment } from "firebase/firestore";
 import { db } from "../utils/firebaseConfig";
 import { BsFillTrashFill } from "react-icons/bs";
+import Swal from "sweetalert2";
 
 
 
@@ -37,7 +38,11 @@ const Cart = () => {
  }
  createOrderInFirestore()
  .then(result => {
-  alert('Order ID= ' + result.id)
+  Swal.fire({
+    icon: 'success',
+    title: `Orden de compra creada con el  Id: ${result.id} `,
+});
+ 
   cartList.forEach(async(item) => {
     const itemRef = doc(db, 'products', item.id);
     await updateDoc (itemRef, {
@@ -60,7 +65,7 @@ const Cart = () => {
     <h3 className="h3">DETALLE DE LA COMPRA</h3>
     {
       cartList.length === 0  
-      ? <li>Carrito Vacio</li>
+      ? <li className="carrito-vacio">Carrito Vacio</li>
       : cartList.map(item => 
         <Card className="carrito-card" key={item.id}>
                 <Card.Img img="fluid" src={item.imagen} className="carrito-img" />
@@ -72,8 +77,7 @@ const Cart = () => {
           </Card>
       )
     }
-    </div>
-    <div>
+   
     {
         cartList.length > 0 &&
       <Card className="card-resumen">
@@ -96,8 +100,3 @@ const Cart = () => {
 
 export default Cart;
 
-//<div className="detalleCarrito">
-//<img src={item.imagen}/>
-//<h4>{item.articulo}</h4>
-//<p>{item.precio}</p>
-//</div> 

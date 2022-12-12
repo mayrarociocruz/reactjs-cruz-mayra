@@ -8,6 +8,7 @@ import Button from 'react-bootstrap/Button';
 import { Link } from "react-router-dom";
 import { useState } from "react";
 import { CartContext } from "./CartContext";
+import Swal from 'sweetalert2';
 
 
 const ItemDetail = ({ item }) => {
@@ -15,7 +16,11 @@ const ItemDetail = ({ item }) => {
     const { addToCart } = useContext(CartContext);
 
     const onAdd = (qty) =>{
-        alert("Has agregado " + qty + " unidades del articulo al carrito.");
+        Swal.fire({
+            icon: 'success',
+            title: `Has agregado ${qty} unidades del articulo al carrito`,
+        });
+
         setItemCount(qty);
         addToCart(item, qty);
     }
@@ -29,7 +34,7 @@ const ItemDetail = ({ item }) => {
         <Row>
             
             <Col xs={12} md={6} sm={6} lg={6}>
-            <Card.Img variant="top" className="img-detail" src={item.imagen} />
+            <Card.Img variant="top" className="img-detail" img="fluid" src={item.imagen} />
             </Col>
             <Col xs={12} md={6} sm={6} lg={6}>
             <Card.Body>

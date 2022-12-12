@@ -28,20 +28,44 @@ code {
   color: antiquewhite;
   
 }
+@media screen and (max-width: 820px) {
+  .hero{
+    width: 100%;
+    background-size: cover;
+  }
+
+}
 .hero-h3{
   display: flex;
   justify-content: center;
   align-items: center;
   color: antiquewhite;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
 }
 .hero-h3 p{
-font-size: 1rem;
+font-size: 0.7rem;
 }
 .about{
-  width: 25rem;
+  width: auto;
   height: auto;
-  margin-left: 5rem;
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.618);
+  padding: 0.8rem;
+}
+@media screen and (max-width: 820px) {
+  .about{
+    /*width: 250px;*/
+    position: absolute;
+    justify-content: center;
+    }
+    .hero-h3 p{
+      font-size: 0.5rem;
+      width: 250px;
+      word-break:break-all;
+      text-align: center;
+      white-space: break-word;
+    }
+  
 }
 /*---navbar---*/
 .brand{
@@ -60,6 +84,9 @@ font-size: 1rem;
 }
 .linkNavbar:focus, .linkNavbar:hover{
   color:darkorange;
+}
+.order-lg-1{
+  background-color: rgba(250, 235, 215, 0.467);
 }
 /*---carrito---*/
 .carrito{
@@ -110,13 +137,13 @@ color: darkorange;
 }
 /*--detalle producto--*/
 .tarjeta{
-  width: 100%;
+  width: 90%;
 }
 .img-detail{
   width: 18rem;
   height: auto;
   align-items: center;
-  margin: 1rem;
+  
 }
 .title-detail{
   text-transform: uppercase;
@@ -128,9 +155,16 @@ color: darkorange;
 .body-card{
   display: flex;
   flex-direction: row;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  
+}
+.carrito-vacio{
+  padding: 1rem;
+  font-weight: bolder;
 }
 .detalle{
-  margin-left: 1rem;
   border-color: black 3px;
   background-color: rgba(255, 255, 255, 0.509);
 }
@@ -138,13 +172,18 @@ color: darkorange;
   margin: 1rem;
 }
 .h3{
-  font-size: 1.2rem;
   margin: 1rem;
+  font-size: 1rem;
+  position: relative;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
 }
 .carrito-card{
   display: flex;
   flex-direction: row;
-  width: 30rem;
+  width: auto;
 }
 .carrito-img{
   width: 5rem;
@@ -157,5 +196,8 @@ color: darkorange;
   margin-right: 1rem;
 }
 .card-resumen{
-  width: 30rem;
+  width: auto;
+
 }
+
+

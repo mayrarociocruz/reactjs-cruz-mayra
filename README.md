@@ -1,3 +1,48 @@
+
+# Cloudsport Jujuy 
+
+Este es mi proyecto una App web realizada con Jsx para mi trabajo final del curso de React.js de Coder House.
+Esta basada en mi tienda de indumentaria deportiva❤️
+
+## Info del proyecto 🛠️
+
+El proyecto esta realizado con los siguientes lenguajes:
+* jsx
+* html
+* css
+
+## Tambien con frameworks 📦
+ * react- boostrap 
+ * iconos de material UI
+ 
+## Base de datos:
+* Base de datos de Google Firebase: https://firebase.google.com/?hl=es&authuser=0
+
+## Demo 🚀
+
+Insert gif or link to demo
+
+https://firebasestorage.googleapis.com/v0/b/cloudsport-jujuy1.appspot.com/o/React%20App%20-%20Google%20Chrome%202022-12-05%2001-41-21.mp4?alt=media&token=b8c2464d-bdd5-4ef9-958d-7ebefd84ceb5
+## Authors ✒️
+
+- [@mayrarociocruz](https://github.com/mayrarociocruz)
+
+https://github.com/mayrarociocruz
+## Screenshots
+
+![App Screenshot](https://firebasestorage.googleapis.com/v0/b/cloudsport-jujuy1.appspot.com/o/imagen_2022-12-05_014914417.png?alt=media&token=20ba5c7a-f9c1-4d1d-bb66-f79b4388d107)
+
+
+
+## Support 🌱
+
+*Toda muestra de agradecimiento es bienvenida y contribuye al crecimiento de su servidora 🌱 *
+
+
+
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
